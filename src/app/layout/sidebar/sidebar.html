@@ -1,0 +1,91 @@
+<header>
+  <a href="#hero" class="inline-block">
+    <img
+      [src]="profile.avatarUrl"
+      [alt]="profile.name"
+      class="h-20 w-20 rounded-full border border-slate-700 object-cover object-top"
+    />
+    <h1 class="mt-5 text-4xl font-bold tracking-tight text-slate-100">
+      {{ profile.name }}
+    </h1>
+  </a>
+  <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200">
+    {{ profile.title }}
+  </h2>
+  <p class="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+    {{ profile.location }}
+  </p>
+
+  <a
+    [href]="profile.resumeUrl"
+    target="_blank"
+    rel="noreferrer"
+    class="group mt-8 inline-flex items-center gap-2 rounded border border-slate-600 px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-slate-200 transition-colors hover:border-teal-300 hover:text-teal-300"
+  >
+    <svg lucideFileText [size]="16"></svg>
+    Resume
+  </a>
+
+  <nav class="nav hidden lg:block mt-16">
+    <ul class="w-max">
+      @for (link of navLinks; track link.fragment) {
+        <li>
+          <a
+            class="group flex items-center py-3"
+            [href]="'#' + link.fragment"
+          >
+            <span
+              class="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-teal-300"
+              [class.w-16]="activeFragment() === link.fragment"
+              [class.bg-teal-300]="activeFragment() === link.fragment"
+            ></span>
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-slate-400 transition-colors group-hover:text-teal-300"
+              [class.text-teal-300]="activeFragment() === link.fragment"
+            >
+              {{ link.label }}
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>
+
+<footer class="mt-10 lg:mt-0">
+  <h2 class="text-sm font-bold uppercase tracking-widest text-slate-100">Get In Touch</h2>
+  <p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-400">
+    I'm always open to discussing new opportunities or interesting projects. Feel free to reach out.
+  </p>
+  <a
+    href="mailto:sreekanthksy02@gmail.com"
+    class="group mt-3 inline-flex items-center gap-2 font-mono text-sm text-teal-300"
+  >
+    sreekanthksy02&#64;gmail.com
+    <span class="transition-transform group-hover:translate-x-1">→</span>
+  </a>
+
+  <div class="mt-6 flex items-center gap-5">
+    @for (social of socialLinks; track social.url) {
+    <a
+      [href]="social.url"
+      [attr.aria-label]="social.label"
+      target="_blank"
+      rel="noreferrer"
+      class="text-slate-400 transition-colors hover:text-teal-300"
+    >
+      @switch (social.icon) {
+        @case ('github') {
+          <app-github-icon [size]="20" />
+        }
+        @case ('linkedin') {
+          <app-linkedin-icon [size]="20" />
+        }
+        @case ('email') {
+          <svg lucideMail [size]="20"></svg>
+        }
+      }
+    </a>
+    }
+  </div>
+</footer>
