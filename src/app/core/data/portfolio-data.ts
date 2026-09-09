@@ -17,7 +17,8 @@ export const NAV_LINKS: NavLink[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'GitHub', url: 'https://github.com/SreekanthT123', icon: 'github' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/t-sreekanth-ksy', icon: 'linkedin' },
-  { label: 'Email', url: 'mailto:sreekanthksy02@gmail.com', icon: 'email' },
+  // Commented out for privacy - re-enable when ready to expose email publicly
+  // { label: 'Email', url: 'mailto:sreekanthksy02@gmail.com', icon: 'email' },
 ];
 
 export const PROFILE = {
