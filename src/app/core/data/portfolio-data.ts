@@ -28,7 +28,7 @@ export const PROFILE = {
   summary:
     'Senior Frontend Engineer & Technical Lead with 8+ years of experience architecting scalable enterprise platforms using Angular, TypeScript, and modern frontend technologies. Proven track record in frontend architecture, platform modernization, and performance engineering while leading cross-functional engineering teams in Agile environments.',
   resumeUrl: '/SREEKANTH_T_Resume.pdf',
-  avatarUrl: '/sreekanth.png',
+  avatarUrl: '/sreekanth.webp',
 };
 
 export const EXPERIENCE: ExperienceEntry[] = [
@@ -67,7 +67,7 @@ export const PROJECTS: ProjectEntry[] = [
       'AI developer productivity SaaS that analyses code diffs, logs, and JSON payloads into plain-English debugging insights. Includes Google OAuth, JWT auth, and rate-limited usage tracking.',
     techStack: ['Angular', 'Node.js', 'OpenAI API', 'Google OAuth', 'JWT', 'Netlify', 'Render'],
     githubUrl: 'https://github.com/SreekanthT123/clearmydev',
-    images: ['/cmd1.png', '/cmd2.png'],
+    images: ['/cmd1.webp', '/cmd2.webp'],
   },
   {
     name: 'NoteIt',
@@ -75,7 +75,7 @@ export const PROJECTS: ProjectEntry[] = [
       'AI knowledge and productivity platform with rich-text notes, automated task extraction, and AI-generated daily digests. Secure multi-user REST APIs with strict per-user data isolation.',
     techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
     githubUrl: 'https://github.com/SreekanthT123/NoteIt',
-    images: ['/ni1.png', '/ni2.png'],
+    images: ['/ni1.webp', '/ni2.webp'],
   },
 ];
 
